@@ -45,6 +45,19 @@ References:
 
 *Ester, M., H. P. Kriegel, J. Sander, and X. Xu, “A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise”, AAAI, 1996*
 
+**Neural Nets**
+
+Convolutional Neural Networks (CNN) revolutionized the field of computer vision. Trained on millions of images, CNNs such as AlexNet perform very well on a variety of vision tasks.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/cv/blob/master/caffe/figures/alexnet_merged.png"/>
+</p>
+
+The figure above depicts AlexNet classifier trained on ImageNet used to classify a super-pixelized image of an anemone fish using the fastSCSP algorithm. Interestingly enough, with K=286 superpixels, the AlexNet correctly predicts the two ground truth categories: anemone fish and sea anemone as indicated by the two spikes in the right most figure.
+
+References:  
+*O. Friefeld, Y. Li, and J. W. Fisher III, "A fast method for inferring high-quality simply-connected superpixels", ICIP 2015*  
+
 
 ### Dependencies
 
