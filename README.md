@@ -32,20 +32,18 @@ References:
 
 **Segmentation**
 
-Image segmentation is a very common sub-problem in computer vision. We often like to identify the objects in an image before further processing.
+Image segmentation is a very common problem in computer vision. We often like to identify objects in an image before further processing.
 
 <p align="center">
 <img src="https://github.com/vsmolyakov/cv/blob/master/segmentation/figures/seg_merged.png"/>
 </p>
 
-The figure above compares to non-parametric algorithms: DP-GMM and DBSCAN applied to image segmentation. From the image we can see that different parameter settings resulted in different discovery of clusters or segments in an image. The on-line VB algorithm configures with alpha = 10 produced a binary segmentation separating the road from the rest of the image. In contrast, DBSCAN based on kd-tree algorithm produced 15 clusters. Both algorithms do not assume that the number of segments in an image is known ahead of time.
+The figure above compares two non-parametric algorithms: DP-GMM and DBSCAN applied to image segmentation. From the images we can see that different parameter settings resulted in different discovery of clusters or segments in an image. The on-line VB algorithm configured with alpha = 10 produced a binary segmentation separating the road from the rest of the image. In contrast, DBSCAN based on kd-tree algorithm produced 15 clusters. Both algorithms do not assume that the number of segments in an image is known ahead of time.
 
 References:  
 *D. Blei and M. Jordan, "Variational Inference for Dirichlet Process Mixtures", Bayesian Analysis, 2006*
 
 *Ester, M., H. P. Kriegel, J. Sander, and X. Xu, “A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise”, AAAI, 1996*
-
-
 
 
 ### Dependencies
