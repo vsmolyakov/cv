@@ -45,7 +45,7 @@ References:
 
 *Ester, M., H. P. Kriegel, J. Sander, and X. Xu, “A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise”, AAAI, 1996*
 
-**Neural Nets**
+**Conv Nets**
 
 Convolutional Neural Networks (CNN) revolutionized the field of computer vision. Trained on millions of images, CNNs such as AlexNet perform very well on a variety of vision tasks.
 
@@ -57,6 +57,20 @@ The figure above depicts AlexNet classifier trained on ImageNet used to classify
 
 References:  
 *O. Friefeld, Y. Li, and J. W. Fisher III, "A fast method for inferring high-quality simply-connected superpixels", ICIP 2015*  
+
+**Image Search**
+
+A VGG-16 convolutional neural net is used to construct an image representation in latent space based on a vector of activations.
+Images from Caltech101 dataset are mapped into activation vectors and a query image is used to find K nearest distance neighbors.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/cv/blob/master/image_search/figures/image_search_merged.png"/>
+</p>
+
+The figure above shows the query image of a chair (left) and a retrieved nearest neighbor images (right). The retrieved images closely resemble the query image.
+
+References:  
+*K. Simonyan and A. Zisserman, "Very Deep Convolutional Networks for Large-Scale Image Recognition", ICLR 2015*  
 
 
 ### Dependencies
