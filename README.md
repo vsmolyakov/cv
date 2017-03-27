@@ -80,10 +80,10 @@ The Kalman filter is an algorithm for exact Bayesian filtering of Linear Dynamic
 <img src="https://github.com/vsmolyakov/cv/blob/master/kalman/figures/kalman_merged.png"/>
 </p>
 
-The figure above shows the predictions of Kalman filter (left) and Kalman smoother (right). We can see that the Kalman smoother produces a smooth trajectory since it takes all observations into account.
+The figure above shows the predictions of Kalman filter (left) and Kalman smoother (right). We can see that the Kalman smoother produces a smooth trajectory due both forward and backward update steps.
 
 References:  
-*C. Bishop, "Pattern Recognition and Machine Learning*, 2006*  
+*C. Bishop, "Pattern Recognition and Machine Learning", 2006*  
 
 
 ### Dependencies
