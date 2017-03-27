@@ -72,6 +72,19 @@ The figure above shows the query image of a chair (left) and a retrieved nearest
 References:  
 *K. Simonyan and A. Zisserman, "Very Deep Convolutional Networks for Large-Scale Image Recognition", ICLR 2015*  
 
+**Kalman Filter Tracking**
+
+The Kalman filter is an algorithm for exact Bayesian filtering of Linear Dynamic System (LDS) models. The Kalman update step mu_n = Amu_{n-1} + K_n (x_n - CAmu_{n-1}) consists of the previous value and a correction term multiplied by the Kalman gain K_n. The Kalman filter outputs a marginal distribution p(z_n|x_1,...,x_n), while the Kalman smoother takes all observations into account.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/cv/blob/master/kalman/figures/kalman_merged.png"/>
+</p>
+
+The figure above shows the predictions of Kalman filter (left) and Kalman smoother (right). We can see that the Kalman smoother produces a smooth trajectory since it takes all observations into account.
+
+References:  
+*C. Bishop, "Pattern Recognition and Machine Learning*, 2006*  
+
 
 ### Dependencies
 
