@@ -85,6 +85,19 @@ The figure above shows the predictions of Kalman filter (left) and Kalman smooth
 References:  
 *C. Bishop, "Pattern Recognition and Machine Learning", 2006*  
 
+**Siamese Neural Network**
+
+Siamese Neural Network consists of two identical networks with shared weights tied together by a contrastive loss function. The network is trained to find similarities between inputs that can take on different modalities such as images (CNNs) or sentences (RNNs).
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/cv/blob/master/siamese/figures/siamese_merged.png"/>
+</p>
+
+The figure above shows a siamese network applied to pairs of MNIST digits. The training set alternates between positive (matching) and negative (different) pairs of digits. The network is able to achieve %99.5 accuracy after 20 training epochs. Besides image recognition, siamese architectures have been used in signature matching and sentence similarity.
+
+References:  
+*G. Koch, et. al., "Siamese Neural Networks for One-shot Image Recognition", ICML 2015*  
+
 
 ### Dependencies
 
