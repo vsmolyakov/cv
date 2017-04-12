@@ -93,7 +93,7 @@ Siamese Neural Network consists of two identical networks with shared weights ti
 <img src="https://github.com/vsmolyakov/cv/blob/master/siamese/figures/siamese_merged.png"/>
 </p>
 
-The figure above shows a siamese network applied to pairs of MNIST digits. The training set alternates between positive (matching) and negative (different) pairs of digits. The network is able to achieve %99.5 accuracy after 20 training epochs. Besides image recognition, siamese architectures have been used in signature matching and sentence similarity.
+The figure above shows a siamese network applied to pairs of MNIST digits. The training set alternates between positive (matching) and negative (different) pairs of digits. The network is able to achieve 99.5% accuracy after 20 training epochs. Besides image recognition, siamese architectures have been used in signature matching and sentence similarity.
 
 References:  
 *G. Koch, et. al., "Siamese Neural Networks for One-shot Image Recognition", ICML 2015*  
