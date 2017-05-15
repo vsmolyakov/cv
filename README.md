@@ -90,7 +90,7 @@ References:
 Particle filter is a Sequential Monte Carlo method of estimating the internal states of a Switching Linear Dynamic System (SLDS). A set of particles is used to represent the posterior distribution of the states of the Markov process. At each iteration, the particles get re-sampled and the ones that explain the observations best propagate to the next iteration.
 
 <p align="center">
-<img src="https://github.com/vsmolyakov/cv/blob/master/kalman/figures/particle_filter_merged.png"/>
+<img src="https://github.com/vsmolyakov/cv/blob/master/particles/figures/particle_filter_merged.png"/>
 </p>
 
 The figure above shows the generated SLDS states (left) and the inferred states (center) by Particle Filter (PF) and the Rao-Blackwellized version (RBPF). We can see that the inferred states closely correspond to the ground truth. Also shown is a particle re-sampling step (right) where only a fraction of particles survive to the next iteration.
