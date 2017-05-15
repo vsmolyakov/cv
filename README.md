@@ -85,6 +85,20 @@ The figure above shows the predictions of Kalman filter (left) and Kalman smooth
 References:  
 *C. Bishop, "Pattern Recognition and Machine Learning", 2006*  
 
+**Particle Filter**
+
+Particle filter is a Sequential Monte Carlo method of estimating the internal states of a Switching Linear Dynamic System (SLDS). A set of particles is used to represent the posterior distribution of the states of the Markov process. At each iteration, the particles get re-sampled and the ones that explain the observations best propagate to the next iteration.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/cv/blob/master/kalman/figures/particle_filter_merged.png"/>
+</p>
+
+The figure above shows the generated SLDS states (left) and the inferred states (center) by Particle Filter (PF) and the Rao-Blackwellized version (RBPF). We can see that the inferred states closely correspond to the ground truth. Also shown is a particle re-sampling step (right) where only a fraction of particles survive to the next iteration.
+
+References:  
+*Nando de Freitas, "Rao-Blackwellized Particle Filter for Fault Diagnosis", 2002*  
+
+
 **Siamese Neural Network**
 
 Siamese Neural Network consists of two identical networks with shared weights tied together by a contrastive loss function. The network is trained to find similarities between inputs that can take on different modalities such as images (CNNs) or sentences (RNNs).
