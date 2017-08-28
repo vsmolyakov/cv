@@ -125,8 +125,23 @@ As a result of training, the generative model learns to produce output examples 
 References:  
 *I. Goodfellow, et. al., "Generative Adversarial Networks", 2014*  
 
+**Captions Generator**
+
+Image caption generation is inspired by machine translation where the encoder is replaced with a CNN and the decoder is a LSTM language model. A VGG16 pre-trained CNN was used to encode images from the Flicker8K dataset which were merged together with training captions describing the image.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/cv/blob/master/captions/figures/captions_merged.png"/>
+</p>
+
+The figure above shows several test images and generated captions. We can tell that the model does not learn to count objects in the image (two dogs, top left) and predicts objects that exist in the training set (tennis ball, top right). An Adam optimizer with early stopping was used for training, a spike in the accuracy resulted from reducing the learning rate by 10 when the loss was not improving.
+
+References:  
+*O. Vinyals, et. al., "Show and Tell: A Neural Image Caption Generator", CVPR 2015*  
+
+
 ### Dependencies
 
 Matlab 2014a  
 Python 2.7  
+TensorFlow 1.3.0  
 OpenCV  
