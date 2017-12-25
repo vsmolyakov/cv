@@ -125,6 +125,21 @@ As a result of training, the generative model learns to produce output examples 
 References:  
 *I. Goodfellow, et. al., "Generative Adversarial Networks", 2014*  
 
+**Neural Style Transfer**
+
+Neural style transfer takes as input a content image and a style image and produces an artistic rendering of the content image. It does that by minimizing the sum of content loss and style loss. The content of the image is captured by the higher layers of a CNN, while the style of the image refers to its texture and simple geometric shapes represented in the lower layers of a CNN.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/cv/blob/master/style_transfer/figures/style_transfer_merged.png"/>
+</p>
+
+The figure above shows the content image (left), the style image (middle) and the output image (right). The output image is found by minimizing the content and style loss for a VGG19 CNN using L-BFGS solver. The output image is the result of 20 iterations of L-BFGS.
+
+References:  
+*L. Gatys, A. Ecker, and M. Bethge, "A Neural Algorithm of Artistic Style", arXiv 2015  
+F. Chollet, "Deep Learning with Python", Manning Publications, 2017*  
+
+
 **Captions Generator**
 
 Image caption generation is inspired by machine translation where the encoder is replaced with a CNN and the decoder is a LSTM language model. A VGG16 pre-trained CNN was used to encode images from the Flicker8K dataset which were merged together with training captions describing the image.
