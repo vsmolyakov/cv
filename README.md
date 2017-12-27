@@ -117,10 +117,10 @@ References:
 Generative Adversarial Network (GAN) consists of two networks trained simultaneously: a generative model (G) that generates output example given random noise as input and a discrimantive model (D) that distinguishes between real and generated examples.
 
 <p align="center">
-<img src="https://github.com/vsmolyakov/cv/blob/master/gan/figures/gan_merged.png"/>
+<img src="https://github.com/vsmolyakov/cv/blob/master/gan/figures/dcgan_cifar10.png"/>
 </p>
 
-As a result of training, the generative model learns to produce output examples that look very realistic (see MNIST digits above) recovering distribution of training data; while the discriminative network outputs equal class probability for real vs generated data.
+As a result of training, the generative model learns to produce output examples that look very realistic (see CIFAR10 example above) recovering distribution of training data; while the discriminative network outputs equal class probability for real vs generated data.
 
 References:  
 *I. Goodfellow, et. al., "Generative Adversarial Networks", 2014*  
