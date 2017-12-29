@@ -142,13 +142,13 @@ F. Chollet, "Deep Learning with Python", Manning Publications, 2017*
 
 **Captions Generator**
 
-Image caption generation is inspired by machine translation where the encoder is replaced with a CNN and the decoder is a LSTM language model. A VGG16 pre-trained CNN was used to encode images from the Flicker8K dataset which were merged together with training captions describing the image.
+An image caption generator is a multi-input neural network that consists of an image branch (ResNet50 CNN) and a language branch (LSTM). The two branches are merged into a common RNN that predicts the next word given the image and the previous caption words.
 
 <p align="center">
 <img src="https://github.com/vsmolyakov/cv/blob/master/captions/figures/captions_merged.png"/>
 </p>
 
-The figure above shows several test images and generated captions. We can tell that the model does not learn to count objects in the image (two dogs, top left) and predicts objects that exist in the training set (tennis ball, top right). An Adam optimizer with early stopping was used for training, a spike in the accuracy resulted from reducing the learning rate by 10 when the loss was not improving.
+The neural captions generator is trained end-to-end on Flicker8K dataset. The training and validation loss and accuracy are shown in the figure above along with the generated captions using beam-search. The neural caption genreator achieves a BLEU score of 0.5 on the test dataset.
 
 References:  
 *O. Vinyals, et. al., "Show and Tell: A Neural Image Caption Generator", CVPR 2015*  
