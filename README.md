@@ -149,7 +149,7 @@ An image caption generator is a multi-input neural network that consists of an i
 <img src="https://github.com/vsmolyakov/cv/blob/master/captions/figures/captions_merged.png"/>
 </p>
 
-The neural captions generator is trained end-to-end on Flicker8K dataset. The training and validation loss and accuracy are shown in the figure above along with the generated captions using beam-search. The neural caption generator achieves a BLEU score of 0.5 on the test dataset.
+The neural captions generator is trained end-to-end on Flicker8K dataset. The training and validation loss and accuracy are shown in the figure above along with the generated captions using beam-search. The neural caption generator achieves a BLEU score of 0.61 on the test dataset.
 
 References:  
 *O. Vinyals, et. al., "Show and Tell: A Neural Image Caption Generator", CVPR 2015*  
