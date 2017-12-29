@@ -52,7 +52,7 @@ def generate_captions(model, image, beam_size):
 	return captions
 
 def test_model(weight, img_name, beam_size = 3):
-	encoded_images = pickle.load( open(DATA_PATH + "encoded_images.p", "rb" ) )
+	encoded_images = pickle.load(open(DATA_PATH + "encoded_images.dat", "rb" ))
 	model = cg.create_model(ret_model = True)
 	model.load_weights(weight)
 
@@ -69,7 +69,7 @@ def test_model_on_images(weight, img_dir, beam_size = 3):
 	captions = {}
 	with open(img_dir, 'rb') as f_images:
 		imgs = f_images.read().strip().split('\n')
-	encoded_images = pickle.load( open(DATA_PATH + "encoded_images.p", "rb" ) )
+	encoded_images = pickle.load(open(DATA_PATH + "encoded_images.dat", "rb"))
 	model = cg.create_model(ret_model = True)
 	model.load_weights(weight)
 
@@ -99,7 +99,7 @@ def test_model_on_images(weight, img_dir, beam_size = 3):
 	f_captions.close()
 	
 	hypotheses=[]
-	references = []
+	references=[]
 	for img_name in imgs:
 		hypothesis = captions[img_name]
 		reference = image_captions_pair[img_name]
@@ -110,20 +110,21 @@ def test_model_on_images(weight, img_dir, beam_size = 3):
 
 if __name__ == '__main__':
 
-    weight = DATA_PATH + 'weights-checkpoint.hdf5'
+    weight = DATA_PATH + '/trained_models/weights-checkpoint.h5'
     #test_image = '3385593926_d3e9c21170.jpg' 
     #test_image = '3745451546_fc8ec70cbd.jpg'
     #test_image = '2207244634_1db1a1890b.jpg'
-    #test_image = '3286822339_5535af6b93.jpg'  #a group of people ar standing on the street
+    #test_image = '3286822339_5535af6b93.jpg' 
 
 
     #display caption
-    print test_model(weight, test_image)
+    #print test_model(weight, test_image)
 
     #display image
-    pil_im = Image.open(DATA_PATH + '/Flicker8k_Dataset/' + test_image)
-    pil_im.show()
+    #pil_im = Image.open(DATA_PATH + '/Flicker8k_Dataset/' + test_image)
+    #pil_im.show()
 
     #compute BLEU score for all test images
     test_img_dir = DATA_PATH + 'Flickr8k_text/Flickr_8k.testImages.txt'
-    #print test_model_on_images(weight, test_img_dir, beam_size=3)
+    BLEU = test_model_on_images(weight, test_img_dir, beam_size=5)
+    print "corpus BLEU: ", BLEU
