@@ -123,7 +123,7 @@ Generative Adversarial Network (GAN) consists of two networks trained simultaneo
 As a result of training, the generative model learns to produce output examples that look very realistic (see CIFAR10 example above) recovering distribution of training data; while the discriminative network outputs equal class probability for real vs generated data.
 
 References:  
-*I. Goodfellow, et. al., "Generative Adversarial Networks", 2014
+*I. Goodfellow, et. al., "Generative Adversarial Networks", 2014  
 F. Chollet, "Deep Learning with Python", Manning Publications, 2017*  
 
 **Neural Style Transfer**
