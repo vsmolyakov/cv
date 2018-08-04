@@ -1,0 +1,70 @@
+item {
+  id: 1
+  name: 'top'
+}
+
+item {
+  id: 2
+  name: 'skirt'
+}
+
+item {
+  id: 3
+  name: 'dress'
+}
+
+item {
+  id: 4
+  name: 'shoes'
+}
+
+item {
+  id: 5
+  name: 'clothing'
+}
+
+item {
+  id: 6
+  name: 'scarf'
+}
+
+item {
+  id: 7
+  name: 'bottom'
+}
+
+item {
+  id: 8
+  name: 'glasses'
+}
+
+item {
+  id: 9
+  name: 'jacket'
+}
+
+item {
+  id: 10
+  name: 'hat'
+}
+
+item {
+  id: 11
+  name: 'bag'
+}
+
+item {
+  id: 12
+  name: 'watch'
+}
+
+item {
+  id: 13
+  name: 'formal_set'
+}
+
+item {
+  id: 14
+  name: 'jewelry'
+}
+
