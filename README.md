@@ -154,6 +154,21 @@ The neural captions generator is trained end-to-end on Flicker8K dataset. The tr
 References:  
 *O. Vinyals, et. al., "Show and Tell: A Neural Image Caption Generator", CVPR 2015*  
 
+**Object Detection**
+
+An image almost always consists of multiple objects, thus we lose information by encoding an image with a single vector. If instead, we learn to detect objects in the image and classify them, we can use this information for visual search and many other applications. Here we focus on the SSD architecture with Inception V2 convolutional base pretrained on COCO dataset and made available as part of TensorFlow Object detection API. The API features multiple detectors (Faster R-CNN, YOLO, SSD) with different speed vs accuracy tradeoffs.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/cv/blob/master/object_detection/figures/ssd_results.png"/>
+</p>
+
+The figure below shows the results of SSD object detector trained 
+on Open Images dataset filtered for fashion for 200K global steps on 2 Tesla M60 AWS GPUs. We can see that with just 4 days of training, we are able to get correct localization of bounding boxes and class labels. We can use mean average precision (mAP@IoU=0.5) for a given Intersection over Union (IoU) threshold to evaluate performance of our object detector. 
+
+References:  
+*TensorFlow Object Detection API: https://github.com/tensorflow/models/tree/master/research/object_detection*  
+*Open Images Dataset: https://storage.googleapis.com/openimages/web/index.html*  
+
 
 ### Dependencies
 
